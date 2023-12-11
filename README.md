@@ -40,6 +40,12 @@ To install the project's dependencies. Then run:
 ```bash
 npm start
 ```
+## 👥 Login Acess 
+Login and Password to acess your liked photos
+```bash
+Login: User | Password: password 
+```
+
 ## 📃 Nomenclatura de arquivos
 |     Arquivos   |Extensões                           
 |----------------|-------------------------------|
