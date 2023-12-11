@@ -1,0 +1,7 @@
+@import "variables.module";
+
+.default-label {
+  font-size: 16px !important;
+  color: $title-color !important;
+  transform: scale(0.75) !important;
+}

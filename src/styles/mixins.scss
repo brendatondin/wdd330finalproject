@@ -1,0 +1,140 @@
+@mixin dFlex($breakpoint:null) {
+  .d-#{$breakpoint}flex {
+    display: flex !important;
+  }
+  .d-#{$breakpoint}block {
+    display: block !important;
+  }
+  .d-#{$breakpoint}none {
+    display: none !important;
+  }
+  .align-items-#{$breakpoint}center {
+    align-items: center !important;
+  }
+  .align-items-#{$breakpoint}start {
+    align-items: flex-start !important;
+  }
+  .align-items-#{$breakpoint}end {
+    align-items: flex-end !important;
+  }
+  .justify-content-#{$breakpoint}center {
+    justify-content: center !important;
+  }
+  .justify-content-#{$breakpoint}start {
+    justify-content: flex-start !important;
+  }
+  .justify-content-#{$breakpoint}end {
+    justify-content: flex-end !important;
+  }
+  .justify-content-#{$breakpoint}between {
+    justify-content: space-between !important;
+  }
+  .justify-content-#{$breakpoint}around {
+    justify-content: space-around !important;
+  }
+  .flex-#{$breakpoint}row {
+    flex-direction: row !important;
+  }
+  .flex-#{$breakpoint}column {
+    flex-direction: column !important;
+  }
+  .flex-#{$breakpoint}column-reverse {
+    flex-direction: column-reverse !important;
+  }
+  .flex-#{$breakpoint}wrap{
+    flex-wrap: wrap !important;
+  }
+}
+
+@mixin spacing($breakpoint:null) {
+  m-#{$breakpoint}auto{
+    margin: auto;
+  }
+  me-#{$breakpoint}auto{
+    margin-right: auto;
+  }
+  ms-#{$breakpoint}auto{
+    margin-left: auto;
+  }
+  mt-#{$breakpoint}auto{
+    margin-top: auto;
+  }
+  mb-#{$breakpoint}auto{
+    margin-bottom: auto;
+  }
+  @for $i from 0 through 300 {
+    $total: $i;
+    .mb-#{$breakpoint}#{$total} {
+      margin-bottom: #{$total}px !important;
+    }
+    .mt-#{$breakpoint}#{$total} {
+      margin-top: #{$total}px !important;
+    }
+    .ms-#{$breakpoint}#{$total} {
+      margin-left: #{$total}px !important;
+    }
+    .me-#{$breakpoint}#{$total} {
+      margin-right: #{$total}px !important;
+    }
+    .my-#{$breakpoint}#{$total} {
+      margin-bottom: #{$total}px !important;
+      margin-top: #{$total}px !important;
+    }
+    .mx-#{$breakpoint}#{$total} {
+      margin-right: #{$total}px !important;
+      margin-left: #{$total}px !important;
+    }
+    .m-#{$breakpoint}#{$total} {
+      margin: #{$total}px !important;
+    }
+    .pb-#{$breakpoint}#{$total} {
+      padding-bottom: #{$total}px !important;
+    }
+    .pt-#{$breakpoint}#{$total} {
+      padding-top: #{$total}px !important;
+    }
+    .ps-#{$breakpoint}#{$total} {
+      padding-left: #{$total}px !important;
+    }
+    .pe-#{$breakpoint}#{$total} {
+      padding-right: #{$total}px !important;
+    }
+    .py-#{$breakpoint}#{$total} {
+      padding-bottom: #{$total}px !important;
+      padding-top: #{$total}px !important;
+    }
+    .px-#{$breakpoint}#{$total} {
+      padding-right: #{$total}px !important;
+      padding-left: #{$total}px !important;
+    }
+    .p-#{$breakpoint}#{$total} {
+      padding: #{$total}px !important;
+    }
+  }
+}
+
+@mixin width100($breakpoint:null){
+  .w-#{$breakpoint}100{
+    width: 100% !important;
+  }
+}
+
+@mixin flexCenterBetween(){
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+@mixin flexCenter(){
+  display: flex !important;
+  align-items: center !important;
+}
+
+@mixin lineClamp($number){
+  overflow: hidden !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: $number !important;
+  line-clamp: $number !important;
+  -webkit-box-orient: vertical !important;
+  text-overflow:ellipsis;
+}

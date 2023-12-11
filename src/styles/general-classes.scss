@@ -1,0 +1,323 @@
+@use "./mixins" as mix;
+@use "variables.module" as var;
+
+//general-classes
+@include mix.dFlex();
+@include mix.spacing();
+@include mix.width100();
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-end {
+  text-align: end !important;
+}
+
+.text-start {
+  text-align: start !important;
+}
+
+.w-auto {
+  width: auto !important;
+}
+
+.text-underline{
+  text-decoration-line: underline;
+}
+
+.h-100 {
+  height: 100% !important;
+}
+
+.text-lower {
+  text-transform: lowercase !important;
+}
+
+.text-upper {
+  text-transform: uppercase !important;
+}
+
+.position-relative {
+  position: relative !important;
+}
+
+.position-absolute {
+  position: absolute !important;
+}
+
+.position-fixed {
+  position: fixed !important;
+}
+
+.position-sticky {
+  position: sticky !important;
+}
+
+.overflow-auto {
+  overflow: auto !important;
+}
+
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
+.object-fit-contain {
+  object-fit: contain !important;
+}
+
+.object-fit-cover {
+  object-fit: cover !important;
+}
+
+.is-clickable {
+  cursor: pointer !important;
+}
+
+.rounded {
+  border-radius: 50%;
+}
+
+.default-border-rad{
+  border-radius: var.$default-border-radius;
+}
+
+.small-border-rad{
+  border-radius: var.$small-border-radius;
+}
+
+.white-space{
+  white-space: normal;
+}
+
+//simple flexes
+.flex-center{
+  @include mix.flexCenter()
+}
+
+.flex-center-between{
+  @include mix.flexCenterBetween()
+}
+
+//medias
+
+@media(min-width: 0) {
+  @include mix.dFlex(xs-);
+  @include mix.spacing(xs-);
+  @include mix.width100(xs-);
+  .text-xs-center {
+    text-align: center !important;
+  }
+
+  .text-xs-end {
+    text-align: end !important;
+  }
+
+  .text-xs-start {
+    text-align: start !important;
+  }
+}
+
+@media(min-width: 576px) {
+  @include mix.dFlex(sm-);
+  @include mix.spacing(sm-);
+  @include mix.width100(sm-);
+  .text-sm-center {
+    text-align: center !important;
+  }
+
+  .text-sm-end {
+    text-align: end !important;
+  }
+
+  .text-sm-start {
+    text-align: start !important;
+  }
+}
+
+@media(min-width: 768px) {
+  @include mix.dFlex(md-);
+  @include mix.spacing(md-);
+  @include mix.width100(md-);
+  .text-md-center {
+    text-align: center !important;
+  }
+
+  .text-md-end {
+    text-align: end !important;
+  }
+
+  .text-md-start {
+    text-align: start !important;
+  }
+}
+
+@media(min-width: 992px) {
+  @include mix.dFlex(lg-);
+  @include mix.spacing(lg-);
+  @include mix.width100(lg-);
+  .text-lg-center {
+    text-align: center !important;
+  }
+
+  .text-lg-end {
+    text-align: end !important;
+  }
+
+  .text-lg-start {
+    text-align: start !important;
+  }
+}
+
+@media(min-width: 1200px) {
+  @include mix.dFlex(xl-);
+  @include mix.spacing(xl-);
+  @include mix.width100(xl-);
+  .text-xl-center {
+    text-align: center !important;
+  }
+
+  .text-xl-end {
+    text-align: end !important;
+  }
+
+  .text-xl-start {
+    text-align: start !important;
+  }
+}
+
+@media(min-width: 1400px) {
+  @include mix.dFlex(xxl-);
+  @include mix.spacing(xxl-);
+  @include mix.width100(xxl-);
+  .text-xxl-center {
+    text-align: center !important;
+  }
+
+  .text-xxl-end {
+    text-align: end !important;
+  }
+
+  .text-xxl-start {
+    text-align: start !important;
+  }
+}
+//z-index loop
+@for $i from 0 through 5 {
+  $total: $i;
+  .z-#{$total} {
+    z-index: #{$total} !important;
+  }
+}
+
+//font-weight loop
+@for $i from 0 through 900 {
+  $total: $i;
+  .font-weight-#{$total} {
+    font-weight: #{$total} !important;
+  }
+}
+
+//gap loop
+@for $i from 0 through 20 {
+  $total: $i;
+  .gap-#{$total} {
+    gap: #{$total}px !important;
+  }
+  .gap-xs-#{$total} {
+    @media(min-width: 0) {
+      gap: #{$total}px !important;
+    }
+  }
+  .gap-sm-#{$total} {
+    @media(min-width: 576px) {
+      gap: #{$total}px !important;
+    }
+  }
+  .gap-md-#{$total} {
+    @media(min-width: 768px) {
+      gap: #{$total}px !important;
+    }
+  }
+  .gap-lg-#{$total} {
+    @media(min-width: 992px) {
+      gap: #{$total}px !important;
+    }
+  }
+  .gap-xl-#{$total} {
+    @media(min-width: 1200px) {
+      gap: #{$total}px !important;
+    }
+  }
+  .gap-xxl-#{$total} {
+    @media(min-width: 1400px) {
+      gap: #{$total}px !important;
+    }
+  }
+}
+
+//loop inset
+@for $i from 0 through 100 {
+  $total: $i;
+  .top-#{$total} {
+    top: #{$total}px !important;
+  }
+  .left-#{$total} {
+    left: #{$total}px !important;
+  }
+  .right-#{$total} {
+    right: #{$total}px !important;
+  }
+  .bottom-#{$total} {
+    bottom: #{$total}px !important;
+  }
+  .inset-#{$total} {
+    inset: #{$total}px !important;
+  }
+}
+
+//custom font sizes loop
+@for $i from 1 through 24{
+  $total: $i;
+  .font-#{$total} {
+    font-size: #{$total}px !important;
+  }
+  .font-xs-#{$total} {
+    @media(min-width: 0) {
+      font-size: #{$total}px !important;
+    }
+  }
+  .font-sm-#{$total} {
+    @media(min-width: 576px) {
+      font-size: #{$total}px !important;
+    }
+  }
+  .font-md-#{$total} {
+    @media(min-width: 768px) {
+      font-size: #{$total}px !important;
+    }
+  }
+  .font-lg-#{$total} {
+    @media(min-width: 992px) {
+      font-size: #{$total}px !important;
+    }
+  }
+  .font-xl-#{$total} {
+    @media(min-width: 1200px) {
+      font-size: #{$total}px !important;
+    }
+  }
+  .font-xxl-#{$total} {
+    @media(min-width: 1400px) {
+      font-size: #{$total}px !important;
+    }
+  }
+}
+
+//line clamp loop
+@for $i from 0 through 5 {
+  $total: $i;
+  .line-clamp-#{$total} {
+    @include mix.lineClamp(#{$total});
+  }
+}

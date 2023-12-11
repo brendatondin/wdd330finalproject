@@ -1,0 +1,30 @@
+@import "variables.module";
+
+//background classes
+.base-bg {
+  background: $base-color !important;
+}
+
+.off-base-bg {
+  background: $off-base-bg !important;
+}
+
+.bg-transparent{
+  background:transparent !important;
+}
+
+//color classes
+.title-color {
+  color: $title-color !important;
+}
+.base-color {
+  color: $base-color !important;
+}
+
+.sub-title-color {
+  color: $subtitle-color !important;
+}
+
+.stroke-color {
+  color: $stroke-color !important;
+}

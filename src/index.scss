@@ -1,0 +1,58 @@
+@import "styles/variables.module";
+@import "./styles/fonts-import";
+@import "./styles/general-classes";
+@import "./styles/color-classes";
+@import "./styles/input-classes";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 400;
+  list-style-type: none;
+  font-family: Inter, 'sans-serif' !important;
+  a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+    color: inherit;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+body {
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-image: url("/public/bg-image.jpg");
+}
+main {
+  width: 100%;
+  min-height: 100vh !important;
+
+  &.main-box {
+    padding: calc(16px + $headerAndFooter) 88px 0 88px;
+    @media(min-width: 1400px) {
+      padding: calc(36px + $headerAndFooter) 88px 0 88px;
+    }
+    @media(max-width: 575px){
+      padding: calc(110px + $headerAndFooter) 88px 0 88px;
+    }
+  }
+}
+
+.stroke-border{border:1px solid $stroke-color}
+
+.default-button{
+  font-family: Inter, 'sans-serif' !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+  border: white 1px solid !important;
+  color: white !important;
+  text-transform: capitalize !important;
+}

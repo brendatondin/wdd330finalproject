@@ -1,0 +1,22 @@
+//color-palette
+$title-color: #1E1E1E;
+$subtitle-color: #7A7A7A;
+$stroke-color: #E7E7E7;
+$base-color: #FFFFFF;
+$background-color: #F5F5F5;
+$off-base-bg: rgba(255, 255, 255, 0.5);
+//general-variables
+$big-border-radius: 16px;
+$default-border-radius: 12px;
+$small-border-radius: 8px;
+$headerAndFooter: 60px;
+
+:export {
+  titleColor: $title-color;
+  subTitleColor: $subtitle-color;
+  strokeColor: $stroke-color;
+  baseColor: $base-color;
+  defaultBorderRadius: $default-border-radius;
+  smallBorderRadius: $small-border-radius;
+  offBaseBg:$off-base-bg;
+}

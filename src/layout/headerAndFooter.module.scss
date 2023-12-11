@@ -1,0 +1,8 @@
+@import "../styles/variables.module";
+
+.headerAndFooter {
+  height: $headerAndFooter;
+  box-shadow: none !important;
+  background-color: $base-color;
+
+}
