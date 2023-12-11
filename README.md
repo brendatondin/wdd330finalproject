@@ -19,12 +19,12 @@ Documentation: [Getting Started | Vite (vitejs.dev)](https://vitejs.dev/guide/)
 
 To clone the project, run the command:
 ```bash
-git clone 
+git clone https://github.com/brendatondin/wdd330finalproject.git
 
 ```
 Or to use SSH
 ```bash
-git clone 
+git clone https://github.com/brendatondin/wdd330finalproject.git
 ```
 Then change your terminal to the directory where the project was created with the command:
 ```bash
