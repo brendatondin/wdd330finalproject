@@ -70,4 +70,4 @@ Inside the **styles** directory, we have the following files:
   >Functions to facilitate class reuse.
 
 
-Please note that I've left the placeholders (`git clone ` and `rer`) empty intentionally, assuming that you might want to fill them with the necessary information.
+Please note that I've left the placeholders (`git clone ` and `wdd330finalproject`) empty intentionally, assuming that you might want to fill them with the necessary information.
