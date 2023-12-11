@@ -26,10 +26,6 @@ Or to use SSH
 ```bash
 git clone https://github.com/brendatondin/wdd330finalproject.git
 ```
-Then change your terminal to the directory where the project was created with the command:
-```bash
-cd wdd330finalproject
-
 ```
 And execute:
 ```bash
